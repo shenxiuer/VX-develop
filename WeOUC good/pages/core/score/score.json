@@ -1,0 +1,6 @@
+{
+  "navigationBarBackgroundColor": "#00BCD4",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "成绩",
+  "enablePullDownRefresh": true
+}

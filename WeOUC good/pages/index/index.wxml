@@ -1,0 +1,58 @@
+<!--pages/index/index.wxml-->
+<swiper wx:if="{{!offline}}" style="" class="swiper" autoplay="true" interval="4000" duration="1000">
+  <block wx:for="{{notices}}" wx:key="{{index}}">
+    <swiper-item>
+      <image style="width:100%" bindtap="noticeTo" data-id='{{item.url}}' src="{{item.pic}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class='container'>
+  <view class='card' style='margin-top:-30rpx;'>
+    <form bindsubmit="submit" report-submit="ture">
+      <view class='navs'>
+        <block wx:for="{{navs}}" wx:key="key">
+          <button data-key='{{item.key}}' data-verify="{{item.verify}}" class="form_button nav" form-type='submit' plain="{{plain}}">
+            <image class="nav-icon" src="/images/index/{{item.key}}.png"></image>
+            <text class="nav-desc text-caption">{{item.desc}}</text>
+          </button>
+        </block>
+      </view>
+    </form>
+  </view>
+  <view class='card' wx:if="{{url}}">
+    <navigator url='/pages/web/web?url={{url}}'>
+      <view class='card-desc text-caption'>今日推送</view>
+      <view class='card-content layout-row layout-start-center' style='height:120rpx;'>
+        <view style='color:white; height:inherit;min-width:120rpx;' class='layout-column layout-center color{{week_index}}'>
+          {{week}}
+        </view>
+        <view class='text-body1' style="margin-left:30rpx;text-decoration:underline">
+          {{title}}
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class='card'>
+    <view class='card-desc text-caption'>今天的课</view>
+    <view wx:if="{{remind}}" class='card-content layout-column layout-center'>
+      <button wx:if="{{remind == 'unauth'}}" class='remind-btn sc-button sc-outlined-btn ' bindtap="auth" sc-class="sc-btn sc-outlined-btn" flat>前去绑定账号</button>
+      <block wx:else>
+        <view class='text-caption'>{{remind}}</view>
+        <button class='remind-btn sc-button sc-outlined-btn ' bindtap="navigatetokb" sc-class="sc-btn sc-outlined-btn" flat>查看完整课表</button>
+      </block>
+    </view>
+    <view wx:else class='card-content'>
+      <view wx:for="{{courses}}" class='layout-row layout-space-between-center today_kb'>
+        <view class='layout-column layout-start'>
+          <view class='text-subtitle2'>{{item.cls.name}}</view>
+          <view class='text-caption' style='margin-top:10rpx'>{{item.classtime}}</view>
+        </view>
+        <view class='text-caption'>{{item.cls.classRoom}}</view>
+      </view>
+      <view class='card-content layout-row layout-center-start'>
+        <button class='remind-btn sc-button sc-outlined-btn ' bindtap="navigatetokb" sc-class="sc-btn sc-outlined-btn" flat>查看完整课表</button>
+      </view>
+    </view>
+    <ad unit-id="adunit-ec3e3215c5407d2e"></ad>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+/* pages/core/test/test.wxss */
+.shift{
+  padding:5rpx 40rpx; 
+}
+.header {
+  text-align: center;
+  background:white;
+  min-height: 80rpx;
+  height: auto;
+  z-index: 0;
+}

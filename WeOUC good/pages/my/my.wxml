@@ -1,0 +1,31 @@
+<view class='container'>
+  <view style='background:white; padding-left:10rpx' class='layout-row layout-start-center'>
+    <icon class='iconfont icon-accountcircle {{color}}' style="font-size:60px" size='60'></icon>
+    <view class='layout-column layout-start text-subtitle2' style='padding-left:10rpx'>
+      <text>{{name}}</text>
+      <text>{{xh}}</text>
+    </view>
+  </view>
+  <view class="list-icon__nav" url="">
+    <view wx:if="{{bind}}" class="list-icon__item">
+      <image class="list-icon__l-icon" src="/images/my/notice.png"></image>
+      <text class="list-icon__text">成绩通知</text>
+      <switch bindchange='notice' checked="{{is_notice}}" />
+    </view>
+    <view bindtap='unbind' wx:if="{{bind}}" class="list-icon__item">
+      <image class="list-icon__l-icon" src="/images/my/unbind.png"></image>
+      <text class="list-icon__text">解除绑定</text>
+      <image class="list-icon__r-icon" src="/images/my/arrow_right.png"></image>
+    </view>
+    <view bindtap='bind' wx:else class="list-icon__item">
+      <image class="list-icon__l-icon" src="/images/my/bind.png"></image>
+      <text class="list-icon__text">绑定账号</text>
+      <image class="list-icon__r-icon" src="/images/my/arrow_right.png"></image>
+    </view>
+    <view bindtap='about' class="list-icon__item">
+      <image class="list-icon__l-icon" src="/images/my/about.png"></image>
+      <text class="list-icon__text">致谢与说明</text>
+      <image class="list-icon__r-icon" src="/images/my/arrow_right.png"></image>
+    </view>
+  </view>
+</view>
