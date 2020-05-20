@@ -1,0 +1,60 @@
+
+
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modalDlg" wx:if="{{showModal}}">
+    <form bindsubmit="Onsubmit" >
+      <view class="first" >
+        待办事件名称:<input name="name"  />
+        待办事件内容:<input name="value"  />
+      </view>
+      <view class="buttonView" >
+        <button class="btn1" form-type="submit" >添加</button>
+      <button class="btn1" bindtap="cancel" >取消</button>
+      </view>
+    </form>
+</view>
+
+
+<!-- 顶部按钮 -->
+<view class="threeButton">
+    <button class="one" type="primary" bindtap="popup">时间表</button>
+    <button class="one" type="primary" bindtap="addClick" >添加事件</button>
+    <button class="one" type="primary">班级课表</button>
+</view>
+
+
+<!-- 上边弹出窗口时间表 -->
+   <van-popup show="{{show}}" round position="top"  custom-style="height: 20%"   bind:close="onClose">
+     <view class="popup_top" wx:for="{{scheduleData}}" wx:key="_id">
+         <view class="time_lift">
+           <view class="time">07:00⌒08:00: {{item.t1}}</view>
+           <view class="time">08:00⌒09:40: {{item.t2}}</view>
+           <view class="time">10:10⌒11:40: {{item.t3}}</view>
+           <view class="time">11:40⌒14:30: {{item.t4}}</view>
+         </view>
+         <view class="time_right">
+           <view class="time">14:30⌒16:10: {{item.t5}}</view>
+           <view class="time">16:30⌒18:10: {{item.t6}}</view>
+           <view class="time">19:00⌒20:40: {{item.t7}}</view>
+           <view class="time">21:00⌒22:00: {{item.t8}}</view>
+         </view>
+    </view>
+
+   </van-popup>
+
+
+
+
+
+
+<!-- 卡片中内容 -->
+<view class="neirong">
+    <view class="project" wx:for="{{upcomingData}}" wx:key="_id" bind:tap="onGoalClick" data-goal-id="{{item._id}}">
+      <view class="title">{{item.name}}</view>
+      <view class="tags">
+        <m-tag>{{item.value}}</m-tag>
+      </view>
+    </view>
+</view>
+
+

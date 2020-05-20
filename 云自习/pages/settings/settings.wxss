@@ -1,0 +1,21 @@
+
+
+.btn{
+    background-color: green;
+    margin-top: 20rpx;
+    width: 40%;
+    color: white;
+    font-size: 30rpx;
+}
+.time {
+    display: flex;
+    margin-top: 10rpx;
+    flex-direction: row;
+}
+.time input{
+    margin-left: 20rpx;
+    padding-left: 10rpx;
+    margin-top: -5rpx;
+    border-bottom:1px solid black;
+
+}

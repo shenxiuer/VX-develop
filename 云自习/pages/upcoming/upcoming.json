@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-popup": "../../dist/popup/index"
+  },
+  "enablePullDownRefresh":true
+
+}

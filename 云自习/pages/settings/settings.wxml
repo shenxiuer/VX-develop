@@ -1,0 +1,23 @@
+
+<!-- 制定时间表 -->
+<form bindsubmit="Omsubmit">
+    <view class="popup_top">
+         <view class="time_lift">
+           <view class="time">07:00⌒08:00: <input name="t1" value="{{value}}" /> </view>
+           <view class="time">10:10⌒11:40: <input name="t2" value="{{value}}" /> </view>
+           <view class="time">11:40⌒14:30: <input name="t3" value="{{value}}" /> </view>
+           <view class="time">08:00⌒09:40: <input name="t4" value="{{value}}" /> </view>
+         </view>
+         <view class="time_right">
+           <view class="time">14:30⌒16:10: <input name="t5" value="{{value}}"/> </view>
+           <view class="time">16:30⌒18:10: <input name="t6" value="{{value}}"/> </view>
+           <view class="time">19:00⌒20:40: <input name="t7" value="{{value}}"/> </view>
+           <view class="time">21:00⌒22:00: <input name="t8" value="{{value}}"/> </view>
+         </view>
+    </view>
+    <button class="btn" form-type="submit" >制定时间表</button>
+
+</form>
+
+<!-- 制定班级课表 -->
+

@@ -1,0 +1,150 @@
+
+.threeButton{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+
+.one{
+  width: 220rpx;
+  height: 80rpx;
+  margin: 10rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+
+.first{
+  padding-top: 40rpx;
+  font-family: "宋体";
+}
+.first input{
+  border:1px solid #000;
+  box-shadow:1px 1px 2px silver;
+  padding-left: 8rpx;
+  border-radius: 10rpx;
+  margin-top: 10rpx;
+  height: 40rpx;
+}
+.buttonView{
+  display: flex;
+  flex-direction: row;
+}
+
+.btn1{
+  background-color: yellowgreen;
+  margin-top: 30rpx;
+  font-size: 12px;
+  width: 120rpx;
+  height: 60rpx;
+}
+
+
+.popup_top{
+  display: flex;
+  flex-direction: row;
+}
+.time_lift,.time_right{
+  flex: 1;
+  height: 180rpx;
+}
+.time{
+  width: 98%;
+  flex-direction: column;
+  border: 1px solid silver ;
+  box-shadow: 1px 1px 1px silver;
+  border-radius: 8rpx;
+  padding-top: 4rpx;
+  font-size: 15px;
+  font-family: "宋体";
+}
+.neirong{
+  box-shadow: 1px 1px 6px rgba(10, 9, 9, 0.08);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9000;
+  opacity: 0.7;
+}
+
+.modalDlg{
+  width: 580rpx;
+  height: 320rpx;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  margin: -370rpx 85rpx;
+  background-color: #fff;
+  border-radius: 36rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.project {
+  width: 70%;
+  margin: 24rpx auto;
+  padding: 24rpx;
+  border-radius: 18rpx;
+  background-color: #FFCC99;
+  box-shadow: 1px 1px 6px black;
+}
+
+.project > .title {
+  font-weight: bold;
+  font-size: 32rpx;
+}
+
+.project > .tags {
+  display: flex;
+  margin-top: 6rpx;
+}
+
+.project > .tags > m-tag {
+  margin-left: 16rpx;
+}
+
+.project > .tags > m-tag:first-child {
+  margin-left: 0;
+}
+

@@ -1,0 +1,43 @@
+<view class="one">
+  <view class="two">
+    <scroll-view class="lift" scroll-y="{{true}}">
+        <view >
+              <view>123</view>
+              <view>123</view>
+              <view>123</view>
+              <view>123</view>
+              <view>123</view>
+              <view>123</view>
+              <view>123</view>
+              <view>123</view>
+              <view>123</view>
+              <view>123</view>
+              <view>123</view>
+              <view>123</view>
+              <view>123</view>
+              <view>123</view>
+              <view>123</view>  
+                  <view>123</view>
+                <view>123</view>
+                <view>123</view>
+                <view>123</view>
+                <view>123</view>
+                <view>123</view>
+                <view>123</view>
+                <view>123</view>
+                <view>123</view>
+                <view>123</view>
+                <view>123</view>
+                <view>123</view>
+                <view>123</view>
+                <view>123</view>
+                <view>123</view>  
+    
+        </view>
+    </scroll-view>
+
+    <scroll-view class="right" scroll-y="{{true}}" >
+      
+    </scroll-view>
+  </view>
+</view>
